@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Sketchpad SQ60 - TX-2 oscilloscope display events</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body { font: 14px/1.5 -apple-system,Segoe UI,sans-serif; background:#0f1512; color:#d8e8d8; margin:2rem auto; max-width:960px; padding:0 1rem; }
+ h1 { font-size:1.3rem; } h2 { font-size:1.05rem; margin-top:2rem; }
+ table { border-collapse:collapse; font:12px/1.4 ui-monospace,monospace; }
+ td,th { border:1px solid #2a3a2a; padding:2px 8px; }
+ th { background:#1a2a1a; }
+ .note { color:#9ab09a; }
+ svg { background:#0a140a; border:1px solid #2a3a2a; width:100%; max-width:640px; }
+</style></head><body>
+<h1>Sketchpad's TX-2 display service drawing on the oscilloscope</h1>
+<p>This page shows a picture drawn by <b>original 1962-63 Sketchpad code</b>
+(the sequence-60 oscilloscope display service <code>SQ60A...SQ60FEW</code> from the
+LMH Y3HT listing, CHM cat. 102726903 vol. 2, transcribed in
+<code>TX-2/Sketchpad sk2.tx2as</code> lines 5376-5512). The code runs unaltered
+on a TX-2 simulator; every dot below is one real <code>TSD</code> display
+transfer to unit 60 (Users Handbook unit sheet "No. 60 OSCILLOSCOPE DISPLAY",
+word format per Lincoln Lab TR-296 Fig. 4.5). Each of the 10 spots is
+intensified 8 times per pass - the original's fewer-than-50-point brightening loop.</p>
+<h2>Scope face (1024x1024 raster, origin at centre)</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+
+<rect width="1024" height="1024" fill="#0a140a"/>
+<line x1="512" y1="0" x2="512" y2="1024" stroke="#204020" stroke-width="1"/>
+<line x1="0" y1="512" x2="1024" y2="512" stroke="#204020" stroke-width="1"/>
+<rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="862" y="162" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="62" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="237" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="962" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="787" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/><rect x="612" y="412" width="2" height="2" fill="#d4ffd4"/>
+<!-- 80 beam points from unit-60 TSD events -->
+
+</svg>
+<p class="note">10 distinct beam points from 80 display events - square + centre dot
+supplied as display-file words (harness input); streaming, repetition and exit are the original code's.
+Raw files: <a style="color:#8fc" href="scope_view.svg">scope_view.svg</a>,
+<a style="color:#8fc" href="scope_trace.jsonl">scope_trace.jsonl</a>.</p>
+<h2>Event trace (80 unit-60 transfers)</h2>
+<table><tr><th>t (us)</th><th>X</th><th>Y</th><th>tag lo</th><th>tag hi</th><th>word (octal)</th></tr>
+<tr><td>3500506</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500537</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500568</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500599</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500631</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500662</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500693</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500724</td><td>350</td><td>350</td><td>012</td><td>012</td><td>257012257012</td></tr>
+<tr><td>3500755</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500787</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500818</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500849</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500880</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500911</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500943</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3500974</td><td>275</td><td>275</td><td>011</td><td>011</td><td>211411211411</td></tr>
+<tr><td>3501005</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501036</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501067</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501099</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501130</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501161</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501192</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501223</td><td>100</td><td>275</td><td>010</td><td>010</td><td>062010211410</td></tr>
+<tr><td>3501255</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501286</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501317</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501348</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501379</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501411</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501442</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501473</td><td>100</td><td>450</td><td>007</td><td>007</td><td>062007341007</td></tr>
+<tr><td>3501504</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501535</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501567</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501598</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501629</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501660</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501691</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501723</td><td>275</td><td>450</td><td>006</td><td>006</td><td>211406341006</td></tr>
+<tr><td>3501754</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501785</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501816</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501847</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501879</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501910</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501941</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3501972</td><td>450</td><td>450</td><td>005</td><td>005</td><td>341005341005</td></tr>
+<tr><td>3502003</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502035</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502066</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502097</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502128</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502159</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502191</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502222</td><td>450</td><td>275</td><td>004</td><td>004</td><td>341004211404</td></tr>
+<tr><td>3502253</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502284</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502315</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502347</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502378</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502409</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502440</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502471</td><td>450</td><td>100</td><td>003</td><td>003</td><td>341003062003</td></tr>
+<tr><td>3502503</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502534</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502565</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502596</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502627</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502659</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502690</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502721</td><td>275</td><td>100</td><td>002</td><td>002</td><td>211402062002</td></tr>
+<tr><td>3502752</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502783</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502815</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502846</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502877</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502908</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502939</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+<tr><td>3502971</td><td>100</td><td>100</td><td>001</td><td>001</td><td>062001062001</td></tr>
+</table>
+<h2>Provenance</h2>
+<p class="note">Source: historical/chm-102726903/102726903-05-02-acc.pdf p.126+
+(CHM "Sketchpad listings..." gift of I. E. Sutherland). Tape
+<code>1e424445...</code> - trace <code>afaa5d82...</code> - source-unit hash
+<code>29c253abee...</code>. Device model cited to the Handbook unit-60 sheet and
+TR-296; the harness supplies only display-file contents and an exit (DEMO.md).</p>
+</body></html>
